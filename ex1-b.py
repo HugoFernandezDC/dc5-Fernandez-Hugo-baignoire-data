@@ -18,8 +18,15 @@ for lettre in phrase:
     else:
         phrase_min += lettre
 
-mots = phrase.split()
-nombre_mots = len(mots)
+nbmots = 0
+for i, char in enumerate(phrase):
+    if char.isalnum():
+        if i + 1 == len(phrase) or not phrase[i + 1].isalnum():
+            nbmots += 1
+    else:
+        if not char.isspace():
+            if i + 1 == len(phrase) or phrase[i + 1].isspace() or phrase[i + 1].isalnum():
+                nbmots += 1
 
 print(phrase_maj)
 print(phrase_min)
