@@ -30,4 +30,4 @@ for i, char in enumerate(phrase):
 
 print(phrase_maj)
 print(phrase_min)
-print(nombre_mots)
+print(nbmots)
